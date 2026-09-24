@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>سید بلال پرچون دوکان</title>
+    <title>سید بلال پرچون دوکان | شاجوی بازار</title>
 
     <meta name="description"
         content="د سید بلال پرچون دوکان - شاجوی بازار، بای پاس سړک، حاجي سلطان حبیب مارکیټ ته مخامخ">
@@ -1226,6 +1226,131 @@
         height: 43px;
     }
 }
+    
+
+/* =========================================================
+   PREMIUM UPGRADE — Sayed Bilal Shop
+   ========================================================= */
+:root{
+  --bg:#f7faf8;
+  --surface:#ffffff;
+  --surface2:#eef5f2;
+  --ink:#17352f;
+  --muted:#667872;
+  --line:#dfeae5;
+  --green:#064b3f;
+  --green2:#08705c;
+  --gold:#ffc400;
+  --gold2:#ffe477;
+  --shadow:0 18px 55px rgba(0,55,42,.13);
+  --glass:rgba(255,255,255,.78);
+}
+html{scroll-padding-top:90px}
+body{background:var(--bg);color:var(--ink);transition:background .35s,color .35s}
+body::selection{background:var(--gold);color:var(--green)}
+
+/* Elegant Pashto typography */
+body,.btn,.nav-links a,input,select,button{font-family:"Noto Naskh Arabic",Tahoma,Arial,sans-serif}
+.logo span,.hero h1,.section-title,.about-content h2,.contact-box h2,.footer h3{letter-spacing:.1px}
+
+.header{background:var(--glass);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.35)}
+.nav{min-height:82px}
+.logo{color:var(--green);font-size:23px}
+.logo img{width:64px;height:64px;filter:drop-shadow(0 7px 14px rgba(0,0,0,.12));transition:.3s}
+.logo:hover img{transform:scale(1.06) rotate(-2deg)}
+.nav-links a{color:var(--ink)}
+.nav-links a:hover{background:rgba(8,112,92,.1)}
+.nav-whatsapp{box-shadow:0 9px 25px rgba(37,211,102,.22)}
+
+/* Theme button */
+.theme-toggle{width:52px;height:30px;border:1px solid var(--line);border-radius:999px;background:var(--surface);display:inline-flex;align-items:center;justify-content:space-between;padding:3px;cursor:pointer;box-shadow:0 5px 15px rgba(0,0,0,.08);color:var(--ink);margin-inline-start:5px}
+.theme-toggle span{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:var(--gold);font-size:14px;transition:.3s}
+.theme-toggle .moon{background:var(--green);color:#fff}
+
+.hero{background:radial-gradient(circle at 82% 20%,rgba(255,196,0,.16),transparent 26%),linear-gradient(135deg,#032c25,#075a4b 58%,#04382f);padding:78px 0 120px}
+.hero-inner{gap:65px}
+.hero h1{font-weight:800;text-shadow:0 8px 30px rgba(0,0,0,.18)}
+.badge{box-shadow:0 10px 30px rgba(255,196,0,.08)}
+.slider-main{height:570px;border-radius:38px;padding:8px;box-shadow:0 30px 75px rgba(0,0,0,.34)}
+.slider-main img{border-radius:31px;cursor:zoom-in}
+
+/* Better cards */
+.trust-card,.category-card,.product-card{background:var(--surface);border-color:var(--line);box-shadow:var(--shadow)}
+.trust-card,.category-card,.product-card,.about-gallery img{transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease,background .35s ease}
+.trust-card:hover,.category-card:hover,.product-card:hover{transform:translateY(-9px) scale(1.01)}
+.category-card{position:relative;overflow:hidden}
+.category-card::after{content:"";position:absolute;inset:auto -40px -65px auto;width:130px;height:130px;border-radius:50%;background:rgba(255,196,0,.09)}
+.product-image{height:245px;background:linear-gradient(145deg,#fbfdfc,#eef5f2)}
+.product-image img{cursor:zoom-in;transition:transform .35s ease}
+.product-card:hover .product-image img{transform:scale(1.06)}
+.product-info{background:var(--surface)}
+.search-box input,.filter-select{background:var(--surface);color:var(--ink);border-color:var(--line);box-shadow:0 7px 22px rgba(0,0,0,.035)}
+.products-section{background:var(--surface2)}
+
+/* All images are zoomable */
+.about-gallery img,.thumb img{cursor:zoom-in}
+.about-gallery img:hover{transform:scale(1.025);box-shadow:0 18px 45px rgba(0,0,0,.16)}
+
+/* Premium about section */
+.about-content{background:var(--surface);padding:34px;border:1px solid var(--line);border-radius:30px;box-shadow:var(--shadow)}
+.owner-box{background:linear-gradient(135deg,rgba(8,112,92,.08),rgba(255,196,0,.09));border-right:5px solid var(--gold)}
+
+/* Contact */
+.contact-box{box-shadow:0 25px 65px rgba(0,45,35,.2)}
+
+/* Scroll reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* About text show/hide */
+.about-more{max-height:500px;overflow:hidden;transition:max-height .5s ease,opacity .4s ease}
+.about-more.is-hidden{max-height:0;opacity:0}
+.more-toggle{margin-top:12px;border:1px solid var(--line);background:var(--surface);color:var(--green);border-radius:12px;padding:9px 16px;font-weight:800;cursor:pointer;transition:.25s}
+.more-toggle:hover{background:var(--gold);border-color:var(--gold)}
+
+/* Bigger image lightbox */
+.image-lightbox{background:rgba(0,0,0,.94);backdrop-filter:blur(8px);padding:18px}
+.lightbox-content{max-width:96vw;max-height:94vh;width:96vw;height:94vh}
+.lightbox-content img{max-width:94vw;max-height:91vh;width:auto;height:auto;border-radius:20px;object-fit:contain;box-shadow:0 25px 100px rgba(0,0,0,.65);cursor:zoom-out}
+.lightbox-close,.lightbox-nav{box-shadow:0 10px 30px rgba(0,0,0,.3)}
+.lightbox-close{top:5px;left:5px;width:52px;height:52px}
+.lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border:0;border-radius:50%;background:#fff;color:var(--green);font-size:25px;font-weight:900;cursor:pointer;z-index:3}
+.lightbox-next{right:12px}.lightbox-prev{left:12px}
+.lightbox-nav:hover{background:var(--gold)}
+.lightbox-caption{position:absolute;bottom:5px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.55);color:#fff;padding:7px 16px;border-radius:999px;font-size:14px;max-width:80%;text-align:center}
+
+/* Floating tools */
+.scroll-top{position:fixed;right:22px;bottom:22px;width:52px;height:52px;border:0;border-radius:50%;background:var(--gold);color:var(--green);font-size:22px;font-weight:900;cursor:pointer;z-index:1000;opacity:0;visibility:hidden;transform:translateY(15px);transition:.3s;box-shadow:0 12px 30px rgba(255,196,0,.3)}
+.scroll-top.show{opacity:1;visibility:visible;transform:none}
+
+/* Dark mode */
+body.dark{
+  --bg:#0b1110;--surface:#111b19;--surface2:#0e1715;--ink:#eef7f3;--muted:#a9bbb5;--line:#263a34;--green:#45b69b;--green2:#63d2b5;--glass:rgba(11,17,16,.86);--shadow:0 18px 55px rgba(0,0,0,.35)
+}
+body.dark .header{border-bottom-color:rgba(255,255,255,.06)}
+body.dark .logo,body.dark .nav-links a,body.dark .section-title,body.dark .about-content h2,body.dark .category-card h3,body.dark .product-title{color:var(--ink)}
+body.dark .products-section{background:#0e1715}
+body.dark .search-box input,body.dark .filter-select{color:var(--ink);background:#121e1b}
+body.dark .product-image{background:#17231f}
+body.dark .owner-box{background:rgba(8,112,92,.14)}
+body.dark .trust-icon,body.dark .category-icon{background:rgba(69,182,155,.12)}
+body.dark .more-toggle{color:var(--ink)}
+body.dark .theme-toggle{background:#15211e}
+
+@media(max-width:800px){
+ .theme-toggle{position:absolute;left:72px;top:20px}
+ .slider-main{height:470px}
+ .about-content{padding:25px}
+ .lightbox-nav{width:44px;height:44px;font-size:20px}
+}
+@media(max-width:550px){
+ .logo span{font-size:17px}.logo img{width:55px;height:55px}
+ .hero{padding-top:48px}.slider-main{height:410px}
+ .product-image{height:190px}
+ .scroll-top{right:15px;bottom:82px}
+ .lightbox-content{width:100vw;height:88vh}.lightbox-content img{max-width:96vw;max-height:82vh}.lightbox-close{top:0;left:0;width:44px;height:44px}.lightbox-next{right:2px}.lightbox-prev{left:2px}
+}
+
     </style>
 </head>
 <!-- ================= IMAGE LIGHTBOX ================= -->
@@ -1237,6 +1362,10 @@
         <button class="lightbox-close" id="lightboxClose">
             ×
         </button>
+
+        <button class="lightbox-nav lightbox-next" id="lightboxNext" type="button" aria-label="بل عکس">❯</button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" type="button" aria-label="مخکینی عکس">❮</button>
+        <div class="lightbox-caption" id="lightboxCaption"></div>
 
         <img
             id="lightboxImage"
@@ -1261,6 +1390,11 @@
 
             <button class="menu-btn" id="menuBtn">
                 ☰
+            </button>
+
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="د تور او سپین حالت بدلول" title="تور / سپین حالت">
+                <span id="themeIcon">☀️</span>
+                <span class="moon">🌙</span>
             </button>
 
             <ul class="nav-links" id="navLinks">
@@ -1570,6 +1704,17 @@
                         ژوند اړین توکي په ښه کیفیت او مناسب ډول وړاندې کړو.
                     </p>
 
+                    <button class="more-toggle" id="aboutToggle" type="button" aria-expanded="true">
+                        ⬆️ معلومات پټ کړئ
+                    </button>
+
+
+                    <div class="about-more" id="aboutMore">
+                        <p>
+                            زموږ موخه دا ده چې د شاجوی بازار د مشتریانو لپاره د ورځني ژوند اړین توکي په اسانه، منظم او ښه کیفیت سره وړاندې کړو.
+                        </p>
+                    </div>
+
 
                     <div class="owner-box">
 
@@ -1832,6 +1977,9 @@
         </div>
 
     </footer>
+
+
+    <button class="scroll-top" id="scrollTop" type="button" aria-label="پورته لاړ شئ">↑</button>
 
 
     <!-- ================= FLOATING WHATSAPP ================= -->
@@ -2447,6 +2595,79 @@ logoImage.addEventListener("click", function(event) {
     imageLightbox.classList.add("show");
     document.body.style.overflow = "hidden";
 });
+
+/* ================= PREMIUM THEME ================= */
+const themeToggle = document.getElementById("themeToggle");
+const themeIcon = document.getElementById("themeIcon");
+const savedTheme = localStorage.getItem("sayedBilalTheme");
+
+function applyTheme(theme){
+    document.body.classList.toggle("dark", theme === "dark");
+    themeIcon.textContent = theme === "dark" ? "🌙" : "☀️";
+    localStorage.setItem("sayedBilalTheme", theme);
+}
+applyTheme(savedTheme || "light");
+
+themeToggle.addEventListener("click", function(){
+    applyTheme(document.body.classList.contains("dark") ? "light" : "dark");
+});
+
+/* ================= ABOUT TEXT SHOW / HIDE ================= */
+const aboutToggle = document.getElementById("aboutToggle");
+const aboutMore = document.getElementById("aboutMore");
+aboutToggle.addEventListener("click", function(){
+    const hidden = aboutMore.classList.toggle("is-hidden");
+    aboutToggle.setAttribute("aria-expanded", String(!hidden));
+    aboutToggle.innerHTML = hidden ? "⬇️ نور معلومات ښکاره کړئ" : "⬆️ معلومات پټ کړئ";
+});
+
+/* ================= SCROLL REVEAL ================= */
+const revealTargets = document.querySelectorAll(".section-header,.trust-card,.category-card,.product-card,.about-content,.about-gallery img,.contact-box,.footer-grid > div");
+revealTargets.forEach(el => el.classList.add("reveal"));
+const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("visible");
+            revealObserver.unobserve(entry.target);
+        }
+    });
+},{threshold:.08});
+revealTargets.forEach(el => revealObserver.observe(el));
+
+/* ================= ALL IMAGE ZOOM + GALLERY NAVIGATION ================= */
+const zoomImages = Array.from(document.querySelectorAll("img:not(#lightboxImage):not(.dot img)"));
+let zoomIndex = 0;
+function openZoom(index){
+    if(!zoomImages.length) return;
+    zoomIndex = (index + zoomImages.length) % zoomImages.length;
+    const img = zoomImages[zoomIndex];
+    lightboxImage.src = img.currentSrc || img.src;
+    lightboxImage.alt = img.alt || "د سید بلال دوکان عکس";
+    const caption = document.getElementById("lightboxCaption");
+    caption.textContent = img.alt || "";
+    imageLightbox.classList.add("show");
+    document.body.style.overflow = "hidden";
+}
+zoomImages.forEach((img,index)=>{
+    img.addEventListener("click",function(e){
+        if(this.closest(".logo")) return;
+        e.stopPropagation();
+        openZoom(index);
+    });
+});
+document.getElementById("lightboxNext").addEventListener("click",e=>{e.stopPropagation();openZoom(zoomIndex+1)});
+document.getElementById("lightboxPrev").addEventListener("click",e=>{e.stopPropagation();openZoom(zoomIndex-1)});
+document.addEventListener("keydown",function(e){
+    if(!imageLightbox.classList.contains("show")) return;
+    if(e.key==="ArrowRight") openZoom(zoomIndex+1);
+    if(e.key==="ArrowLeft") openZoom(zoomIndex-1);
+});
+
+/* ================= SCROLL TOP ================= */
+const scrollTop = document.getElementById("scrollTop");
+window.addEventListener("scroll",()=>scrollTop.classList.toggle("show",window.scrollY>500),{passive:true});
+scrollTop.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
+
     </script>
 
 </body>
