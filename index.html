@@ -1123,6 +1123,12 @@
                 font-size: 27px;
             }
         }
+        .logo img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    cursor: zoom-in;
+}
         .logo {
     display: flex;
     align-items: center;
@@ -1248,8 +1254,8 @@
     <header class="header">
         <div class="container nav">
 
-            <a href="#home" class="logo">
-    <img src="https://i.ibb.co/nsCTZygm/image.png" alt="سید بلال لوګو">
+        <a href="#home" class="logo">
+    <img src="https://i.ibb.co/LXLQ41Fp/image.png" alt="سید بلال لوګو">
     <span>سید بلال پرچون دوکان</span>
 </a>
 
@@ -2431,6 +2437,16 @@ document.addEventListener(
 
     }
 );
+const logoImage = document.querySelector(".logo img");
+
+logoImage.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    lightboxImage.src = this.src;
+    lightboxImage.alt = this.alt;
+    imageLightbox.classList.add("show");
+    document.body.style.overflow = "hidden";
+});
     </script>
 
 </body>
