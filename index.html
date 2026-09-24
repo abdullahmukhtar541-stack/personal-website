@@ -1,1018 +1,2264 @@
 <!DOCTYPE html>
 <html lang="ps" dir="rtl">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>سید بلال | پرچون دوکان</title>
+    <title>سید بلال پرچون دوکان</title>
 
-  <meta name="description"
+    <meta name="description"
         content="د سید بلال پرچون دوکان - شاجوی بازار، بای پاس سړک، حاجي سلطان حبیب مارکیټ ته مخامخ">
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Tahoma, Arial, sans-serif;
-    }
-
-    html{
-      scroll-behavior:smooth;
-    }
-
-    body{
-      background:#f5f7fa;
-      color:#172033;
-      line-height:1.8;
-    }
-
-    a{
-      text-decoration:none;
-    }
-
-    /* HEADER */
-    header{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      background:rgba(255,255,255,.96);
-      backdrop-filter:blur(12px);
-      box-shadow:0 3px 20px rgba(0,0,0,.08);
-    }
-
-    .nav{
-      max-width:1200px;
-      margin:auto;
-      padding:14px 20px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
-    }
-
-    .logo{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      color:#087f5b;
-      font-size:23px;
-      font-weight:900;
-    }
-
-    .logo-icon{
-      width:45px;
-      height:45px;
-      border-radius:14px;
-      background:linear-gradient(135deg,#00a86b,#087f5b);
-      color:white;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:23px;
-      box-shadow:0 7px 18px rgba(0,168,107,.25);
-    }
-
-    nav{
-      display:flex;
-      gap:8px;
-      flex-wrap:wrap;
-      justify-content:center;
-    }
-
-    nav a{
-      color:#344054;
-      padding:8px 13px;
-      border-radius:10px;
-      font-size:14px;
-      font-weight:bold;
-      transition:.25s;
-    }
-
-    nav a:hover{
-      background:#e9f8f2;
-      color:#087f5b;
-    }
-
-    .whatsapp-btn{
-      background:#25D366;
-      color:white;
-      padding:10px 17px;
-      border-radius:12px;
-      font-weight:bold;
-      box-shadow:0 6px 15px rgba(37,211,102,.25);
-      transition:.25s;
-      white-space:nowrap;
-    }
-
-    .whatsapp-btn:hover{
-      transform:translateY(-2px);
-      background:#1ebe5d;
-    }
-
-    /* HERO */
-    .hero{
-      min-height:520px;
-      display:flex;
-      align-items:center;
-      position:relative;
-      overflow:hidden;
-      background:
-        linear-gradient(90deg,rgba(3,29,22,.92),rgba(3,29,22,.68)),
-        url("https://i.ibb.co/bgP56MqC/image.png") center/cover;
-    }
-
-    .hero-content{
-      max-width:1200px;
-      width:100%;
-      margin:auto;
-      padding:70px 20px;
-      color:white;
-    }
-
-    .badge{
-      display:inline-block;
-      background:rgba(255,255,255,.14);
-      border:1px solid rgba(255,255,255,.25);
-      padding:7px 14px;
-      border-radius:50px;
-      margin-bottom:18px;
-      font-size:14px;
-    }
-
-    .hero h1{
-      font-size:clamp(38px,7vw,72px);
-      line-height:1.15;
-      margin-bottom:18px;
-    }
-
-    .hero h1 span{
-      color:#57e6a7;
-    }
-
-    .hero p{
-      max-width:680px;
-      font-size:19px;
-      color:#e5fff4;
-      margin-bottom:28px;
-    }
-
-    .hero-buttons{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-    }
-
-    .main-btn{
-      background:#25D366;
-      color:white;
-      padding:14px 23px;
-      border-radius:14px;
-      font-weight:bold;
-      transition:.25s;
-    }
-
-    .main-btn:hover{
-      transform:translateY(-3px);
-    }
-
-    .second-btn{
-      background:white;
-      color:#087f5b;
-      padding:14px 23px;
-      border-radius:14px;
-      font-weight:bold;
-    }
-
-    /* GENERAL */
-    .container{
-      max-width:1200px;
-      margin:auto;
-      padding:75px 20px;
-    }
-
-    .section-title{
-      text-align:center;
-      margin-bottom:35px;
-    }
-
-    .section-title h2{
-      font-size:34px;
-      color:#172033;
-      margin-bottom:8px;
-    }
-
-    .section-title p{
-      color:#667085;
-    }
-
-    /* CATEGORIES */
-    .categories{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:18px;
-    }
-
-    .category{
-      background:white;
-      border-radius:20px;
-      padding:25px 15px;
-      text-align:center;
-      box-shadow:0 7px 25px rgba(16,24,40,.07);
-      transition:.3s;
-      border:1px solid #edf0f3;
-    }
-
-    .category:hover{
-      transform:translateY(-7px);
-      box-shadow:0 15px 35px rgba(16,24,40,.11);
-    }
-
-    .category-icon{
-      font-size:40px;
-      margin-bottom:8px;
-    }
-
-    .category h3{
-      font-size:17px;
-      color:#087f5b;
-    }
-
-    /* PRODUCTS */
-    .products{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:20px;
-    }
-
-    .product{
-      background:white;
-      border-radius:20px;
-      overflow:hidden;
-      border:1px solid #edf0f3;
-      box-shadow:0 7px 25px rgba(16,24,40,.07);
-      transition:.3s;
-    }
-
-    .product:hover{
-      transform:translateY(-7px);
-      box-shadow:0 15px 35px rgba(16,24,40,.12);
-    }
-
-    .product-img{
-      height:230px;
-      background:#f8fafc;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:12px;
-    }
-
-    .product-img img{
-      width:100%;
-      height:100%;
-      object-fit:contain;
-      transition:.3s;
-    }
-
-    .product:hover img{
-      transform:scale(1.05);
-    }
-
-    .product-body{
-      padding:17px;
-    }
-
-    .product-cat{
-      color:#00a86b;
-      font-size:12px;
-      font-weight:bold;
-      margin-bottom:4px;
-    }
-
-    .product h3{
-      font-size:17px;
-      margin-bottom:13px;
-      min-height:55px;
-    }
-
-    .product-btn{
-      display:block;
-      text-align:center;
-      background:#25D366;
-      color:white;
-      padding:10px;
-      border-radius:11px;
-      font-weight:bold;
-      font-size:13px;
-      transition:.25s;
-    }
-
-    .product-btn:hover{
-      background:#1ebe5d;
-    }
-
-    /* FEATURES */
-    .features{
-      background:#087f5b;
-      color:white;
-    }
-
-    .feature-grid{
-      max-width:1200px;
-      margin:auto;
-      padding:65px 20px;
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:20px;
-    }
-
-    .feature{
-      text-align:center;
-      padding:25px;
-      background:rgba(255,255,255,.08);
-      border:1px solid rgba(255,255,255,.13);
-      border-radius:20px;
-    }
-
-    .feature-icon{
-      font-size:42px;
-      margin-bottom:10px;
-    }
-
-    .feature h3{
-      margin-bottom:6px;
-    }
-
-    .feature p{
-      color:#dcfff1;
-      font-size:14px;
-    }
-
-    /* OWNER */
-    .owner{
-      display:grid;
-      grid-template-columns:1.2fr .8fr;
-      gap:35px;
-      align-items:center;
-    }
-
-    .gallery{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:12px;
-    }
-
-    .gallery img{
-      width:100%;
-      height:220px;
-      object-fit:cover;
-      border-radius:18px;
-      box-shadow:0 8px 25px rgba(0,0,0,.09);
-      transition:.3s;
-    }
-
-    .gallery img:hover{
-      transform:scale(1.03);
-    }
-
-    .owner-info{
-      background:white;
-      padding:30px;
-      border-radius:22px;
-      box-shadow:0 8px 30px rgba(16,24,40,.08);
-    }
-
-    .owner-info h2{
-      color:#087f5b;
-      margin-bottom:10px;
-      font-size:31px;
-    }
-
-    .info{
-      padding:13px 0;
-      border-bottom:1px solid #edf0f3;
-      color:#475467;
-    }
-
-    .info strong{
-      color:#172033;
-    }
-
-    .info:last-child{
-      border-bottom:0;
-    }
-
-    /* CONTACT */
-    .contact-box{
-      background:linear-gradient(135deg,#e8fff5,#ffffff);
-      border:1px solid #ccefe1;
-      border-radius:25px;
-      padding:45px 25px;
-      text-align:center;
-    }
-
-    .contact-box h2{
-      color:#087f5b;
-      font-size:32px;
-      margin-bottom:10px;
-    }
-
-    .contact-box p{
-      color:#667085;
-      margin-bottom:22px;
-    }
-
-    .big-whatsapp{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      background:#25D366;
-      color:white;
-      padding:14px 28px;
-      border-radius:14px;
-      font-size:17px;
-      font-weight:bold;
-      box-shadow:0 8px 20px rgba(37,211,102,.25);
-    }
-
-    /* FOOTER */
-    footer{
-      background:#101828;
-      color:white;
-      padding:35px 20px 20px;
-      text-align:center;
-    }
-
-    footer h3{
-      color:#57e6a7;
-      margin-bottom:8px;
-    }
-
-    footer p{
-      color:#b8c0cc;
-      font-size:14px;
-      margin:4px;
-    }
-
-    .developer{
-      margin-top:22px;
-      padding-top:18px;
-      border-top:1px solid #263143;
-      color:#98a2b3;
-    }
-
-    .developer strong{
-      color:#57e6a7;
-    }
-
-    /* FLOATING WHATSAPP */
-    .floating-whatsapp{
-      position:fixed;
-      left:22px;
-      bottom:22px;
-      width:60px;
-      height:60px;
-      border-radius:50%;
-      background:#25D366;
-      color:white;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:30px;
-      box-shadow:0 8px 25px rgba(0,0,0,.2);
-      z-index:999;
-      animation:pulse 2s infinite;
-    }
-
-    @keyframes pulse{
-      0%{
-        box-shadow:0 0 0 0 rgba(37,211,102,.5);
-      }
-      70%{
-        box-shadow:0 0 0 15px rgba(37,211,102,0);
-      }
-      100%{
-        box-shadow:0 0 0 0 rgba(37,211,102,0);
-      }
-    }
-
-    /* MOBILE */
-    @media(max-width:900px){
-      .products{
-        grid-template-columns:repeat(3,1fr);
-      }
-
-      .categories{
-        grid-template-columns:repeat(2,1fr);
-      }
-
-      .owner{
-        grid-template-columns:1fr;
-      }
-    }
-
-    @media(max-width:650px){
-      .nav{
-        flex-wrap:wrap;
-        justify-content:center;
-      }
-
-      nav{
-        order:3;
-        width:100%;
-      }
-
-      .hero{
-        min-height:470px;
-      }
-
-      .hero h1{
-        font-size:42px;
-      }
-
-      .hero p{
-        font-size:16px;
-      }
-
-      .products{
-        grid-template-columns:repeat(2,1fr);
-        gap:12px;
-      }
-
-      .product-img{
-        height:180px;
-      }
-
-      .product-body{
-        padding:12px;
-      }
-
-      .product h3{
-        font-size:14px;
-      }
-
-      .feature-grid{
-        grid-template-columns:1fr;
-      }
-
-      .gallery{
-        grid-template-columns:repeat(2,1fr);
-      }
-
-      .gallery img{
-        height:180px;
-      }
-
-      .section-title h2{
-        font-size:28px;
-      }
-    }
-
-    @media(max-width:420px){
-      .products{
-        grid-template-columns:1fr;
-      }
-
-      .categories{
-        grid-template-columns:1fr 1fr;
-      }
-
-      .gallery{
-        grid-template-columns:1fr;
-      }
-    }
-  </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --green: #064b3f;
+            --green2: #08705c;
+            --dark: #04382f;
+            --gold: #ffc400;
+            --gold2: #ffdc45;
+            --white: #ffffff;
+            --light: #f5f8f6;
+            --text: #17352f;
+            --muted: #6b7c77;
+            --shadow: 0 15px 40px rgba(0, 60, 45, .12);
+            --radius: 22px;
+        }
+
+        body {
+            font-family: "Noto Naskh Arabic", Tahoma, Arial, sans-serif;
+            background: #f7faf8;
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        button,
+        input,
+        select {
+            font-family: inherit;
+        }
+
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+        /* ================= HEADER ================= */
+
+        .header {
+            background: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, .07);
+        }
+
+        .nav {
+            min-height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 800;
+            color: var(--green);
+            font-size: 22px;
+            white-space: nowrap;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 15px;
+            background: var(--green);
+            color: var(--gold);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            box-shadow: 0 7px 20px rgba(6, 75, 63, .22);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            padding: 10px 13px;
+            font-weight: 600;
+            color: #294a43;
+            border-radius: 12px;
+            transition: .3s;
+        }
+
+        .nav-links a:hover {
+            background: #edf6f2;
+            color: var(--green);
+        }
+
+        .nav-whatsapp {
+            background: #25d366;
+            color: #fff !important;
+            padding: 11px 17px !important;
+            border-radius: 13px !important;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .menu-btn {
+            display: none;
+            width: 45px;
+            height: 45px;
+            border: 0;
+            border-radius: 12px;
+            background: var(--green);
+            color: #fff;
+            font-size: 23px;
+            cursor: pointer;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            background:
+                radial-gradient(circle at 15% 20%, rgba(255, 196, 0, .12), transparent 30%),
+                linear-gradient(135deg, #04382f, #075a4b 65%, #064235);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            padding: 70px 0 110px;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border: 1px solid rgba(255, 196, 0, .15);
+            border-radius: 50%;
+            left: -180px;
+            top: -150px;
+        }
+
+        .hero-inner {
+            width: min(1180px, 92%);
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 60px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 196, 0, .13);
+            border: 1px solid rgba(255, 196, 0, .35);
+            color: var(--gold);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 5vw, 67px);
+            line-height: 1.25;
+            margin-bottom: 18px;
+            font-weight: 800;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+        }
+
+        .hero-text p {
+            color: #d9e9e4;
+            font-size: 18px;
+            max-width: 620px;
+            margin-bottom: 28px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            border: none;
+            cursor: pointer;
+            padding: 13px 23px;
+            border-radius: 14px;
+            font-weight: 800;
+            font-size: 16px;
+            transition: .3s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: var(--green);
+        }
+
+        .btn-gold:hover {
+            background: var(--gold2);
+            transform: translateY(-3px);
+        }
+
+        .btn-whatsapp {
+            background: #25d366;
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            background: #1fc158;
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, .3);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, .1);
+        }
+
+        /* ================= SLIDER ================= */
+
+        .slider-area {
+            position: relative;
+        }
+
+        .slider-main {
+            height: 530px;
+            border-radius: 35px;
+            padding: 7px;
+            background: linear-gradient(145deg, var(--gold), #fff0a3, var(--gold));
+            box-shadow: 0 25px 60px rgba(0, 0, 0, .3);
+            position: relative;
+        }
+
+        .slider-main img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 29px;
+            background: #e9efec;
+            transition: opacity .35s ease;
+        }
+
+        .slider-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 45px;
+            height: 45px;
+            border: none;
+            border-radius: 50%;
+            background: white;
+            color: var(--green);
+            font-size: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .18);
+            z-index: 5;
+            transition: .3s;
+        }
+
+        .slider-arrow:hover {
+            background: var(--gold);
+        }
+
+        .arrow-next {
+            right: 18px;
+        }
+
+        .arrow-prev {
+            left: 18px;
+        }
+
+        .thumbnails {
+            display: flex;
+            justify-content: center;
+            gap: 9px;
+            margin-top: 16px;
+            flex-wrap: wrap;
+        }
+
+        .thumb {
+            width: 70px;
+            height: 62px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid transparent;
+            cursor: pointer;
+            opacity: .65;
+            transition: .3s;
+        }
+
+        .thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .thumb.active {
+            border-color: var(--gold);
+            opacity: 1;
+            transform: translateY(-3px);
+        }
+
+        .dots {
+            display: flex;
+            justify-content: center;
+            gap: 7px;
+            margin-top: 12px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .4);
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .dot.active {
+            background: var(--gold);
+            width: 24px;
+            border-radius: 20px;
+        }
+
+        .hero-wave {
+            position: absolute;
+            bottom: -2px;
+            left: -2%;
+            width: 104%;
+            height: 70px;
+            background: #f7faf8;
+            border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+        }
+
+        /* ================= TRUST ================= */
+
+        .trust-section {
+            margin-top: -20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .trust-card {
+            background: white;
+            border-radius: 20px;
+            padding: 23px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border: 1px solid #edf2ef;
+        }
+
+        .trust-icon {
+            width: 55px;
+            height: 55px;
+            margin: 0 auto 12px;
+            border-radius: 16px;
+            background: #edf8f3;
+            color: var(--green);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+        }
+
+        .trust-card h3 {
+            font-size: 18px;
+            color: var(--green);
+            margin-bottom: 3px;
+        }
+
+        .trust-card p {
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        /* ================= GENERAL SECTION ================= */
+
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 40px;
+        }
+
+        .section-label {
+            color: var(--green2);
+            font-weight: 800;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .section-title {
+            font-size: 38px;
+            color: var(--green);
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .section-description {
+            color: var(--muted);
+        }
+
+        /* ================= CATEGORIES ================= */
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .category-card {
+            background: white;
+            border: 1px solid #edf1ef;
+            border-radius: 22px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: .3s;
+            cursor: pointer;
+            box-shadow: 0 7px 25px rgba(0, 60, 45, .05);
+        }
+
+        .category-card:hover {
+            transform: translateY(-7px);
+            box-shadow: var(--shadow);
+            border-color: #d6e9e2;
+        }
+
+        .category-icon {
+            width: 75px;
+            height: 75px;
+            margin: auto auto 15px;
+            border-radius: 22px;
+            background: #eff8f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 36px;
+        }
+
+        .category-card h3 {
+            color: var(--green);
+            font-size: 20px;
+        }
+
+        .category-card p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* ================= PRODUCTS ================= */
+
+        .products-section {
+            background: #eef5f2;
+        }
+
+        .product-tools {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            position: relative;
+            width: min(500px, 100%);
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 1px solid #dce8e4;
+            border-radius: 15px;
+            outline: none;
+            font-size: 16px;
+            background: white;
+        }
+
+        .search-box input:focus {
+            border-color: var(--green2);
+            box-shadow: 0 0 0 3px rgba(8, 112, 92, .08);
+        }
+
+        .filter-select {
+            padding: 14px 20px;
+            border: 1px solid #dce8e4;
+            border-radius: 15px;
+            background: white;
+            color: var(--text);
+            outline: none;
+            min-width: 180px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 22px;
+            overflow: hidden;
+            border: 1px solid #e7eeeb;
+            transition: .3s;
+            box-shadow: 0 8px 25px rgba(0, 50, 40, .05);
+        }
+
+        .product-card:hover {
+            transform: translateY(-7px);
+            box-shadow: var(--shadow);
+        }
+
+        .product-image {
+            height: 220px;
+            padding: 12px;
+            background: #f8faf9;
+            position: relative;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 14px;
+        }
+
+        .product-info {
+            padding: 18px;
+        }
+
+        .product-category {
+            color: var(--green2);
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .product-title {
+            font-size: 18px;
+            color: var(--green);
+            margin: 3px 0 12px;
+            min-height: 58px;
+        }
+
+        .product-btn {
+            width: 100%;
+            padding: 11px;
+            border-radius: 12px;
+            border: none;
+            background: #25d366;
+            color: white;
+            cursor: pointer;
+            font-weight: 800;
+            font-size: 15px;
+            transition: .3s;
+        }
+
+        .product-btn:hover {
+            background: #1db954;
+        }
+
+        .no-products {
+            text-align: center;
+            grid-column: 1 / -1;
+            padding: 40px;
+            color: var(--muted);
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .about-gallery img {
+            width: 100%;
+            height: 245px;
+            object-fit: cover;
+            border-radius: 22px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+        }
+
+        .about-gallery img:first-child {
+            height: 505px;
+            grid-row: span 2;
+        }
+
+        .about-content .section-label {
+            margin-bottom: 5px;
+        }
+
+        .about-content h2 {
+            font-size: 39px;
+            color: var(--green);
+            line-height: 1.4;
+            margin-bottom: 18px;
+        }
+
+        .about-content > p {
+            color: var(--muted);
+            font-size: 17px;
+            margin-bottom: 22px;
+        }
+
+        .owner-box {
+            background: #edf7f3;
+            border-right: 5px solid var(--gold);
+            border-radius: 15px;
+            padding: 18px;
+            margin-bottom: 18px;
+        }
+
+        .owner-box strong {
+            color: var(--green);
+            font-size: 19px;
+        }
+
+        .info-list {
+            list-style: none;
+            display: grid;
+            gap: 10px;
+        }
+
+        .info-list li {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            color: #4b635d;
+        }
+
+        .info-list span:first-child {
+            font-size: 20px;
+        }
+
+        /* ================= CONTACT ================= */
+
+        .contact-section {
+            padding: 20px 0 90px;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #04382f, #08705c);
+            border-radius: 30px;
+            padding: 55px;
+            color: white;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 30px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .contact-box::after {
+            content: "✦";
+            position: absolute;
+            left: 50px;
+            bottom: -20px;
+            color: rgba(255, 196, 0, .15);
+            font-size: 130px;
+        }
+
+        .contact-box h2 {
+            font-size: 36px;
+            margin-bottom: 8px;
+        }
+
+        .contact-box p {
+            color: #d9e9e4;
+        }
+
+        .contact-details {
+            margin-top: 15px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-details div {
+            color: #fff;
+        }
+
+        /* ================= FOOTER ================= */
+
+        .footer {
+            background: #032c25;
+            color: #cfe0dc;
+            padding: 65px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr;
+            gap: 45px;
+        }
+
+        .footer h3 {
+            color: var(--gold);
+            margin-bottom: 15px;
+            font-size: 21px;
+        }
+
+        .footer p {
+            color: #b9cfca;
+            margin-bottom: 7px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 7px;
+        }
+
+        .footer-links a {
+            transition: .3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .creator-box {
+            margin-top: 35px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, .15);
+            text-align: center;
+        }
+
+        .creator-label {
+            color: var(--gold);
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .creator-name {
+            color: white;
+            font-size: 26px;
+            margin: 5px 0;
+        }
+
+        .creator-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 18px;
+        }
+
+        .creator-btn {
+            padding: 12px 22px;
+            border-radius: 13px;
+            font-weight: bold;
+            transition: .3s;
+        }
+
+        .creator-site {
+            background: var(--gold);
+            color: var(--green);
+        }
+
+        .creator-whatsapp {
+            background: #25d366;
+            color: white;
+        }
+
+        .creator-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, .1);
+            margin-top: 35px;
+            padding-top: 20px;
+            color: #8eaaa4;
+            font-size: 14px;
+        }
+
+        /* ================= FLOATING WHATSAPP ================= */
+
+        .floating-whatsapp {
+            position: fixed;
+            left: 22px;
+            bottom: 22px;
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            background: #25d366;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 31px;
+            z-index: 1000;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, .4);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, .45);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 1000px) {
+
+            .nav-links {
+                gap: 0;
+            }
+
+            .nav-links a {
+                padding: 8px;
+                font-size: 14px;
+            }
+
+            .hero-inner {
+                gap: 35px;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 800px) {
+
+            .nav {
+                min-height: 70px;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 70px;
+                right: 4%;
+                left: 4%;
+                background: white;
+                display: none;
+                flex-direction: column;
+                padding: 15px;
+                border-radius: 18px;
+                box-shadow: 0 15px 40px rgba(0, 0, 0, .12);
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+
+            .hero {
+                padding: 50px 0 90px;
+            }
+
+            .hero-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text {
+                text-align: center;
+            }
+
+            .hero-text p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .slider-main {
+                height: 470px;
+            }
+
+            .trust-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .contact-box {
+                grid-template-columns: 1fr;
+                padding: 35px;
+                text-align: center;
+            }
+
+            .contact-details {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            .logo {
+                font-size: 17px;
+            }
+
+            .logo-icon {
+                width: 42px;
+                height: 42px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero-text p {
+                font-size: 16px;
+            }
+
+            .slider-main {
+                height: 400px;
+                border-radius: 25px;
+            }
+
+            .slider-main img {
+                border-radius: 19px;
+            }
+
+            .thumb {
+                width: 53px;
+                height: 50px;
+            }
+
+            .trust-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+
+            .trust-card {
+                padding: 15px 8px;
+            }
+
+            .trust-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 21px;
+            }
+
+            .section {
+                padding: 65px 0;
+            }
+
+            .section-title {
+                font-size: 31px;
+            }
+
+            .category-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+
+            .category-card {
+                padding: 20px 10px;
+            }
+
+            .category-icon {
+                width: 58px;
+                height: 58px;
+                font-size: 27px;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+
+            .product-image {
+                height: 160px;
+                padding: 8px;
+            }
+
+            .product-info {
+                padding: 12px;
+            }
+
+            .product-title {
+                font-size: 16px;
+                min-height: 55px;
+            }
+
+            .product-btn {
+                font-size: 13px;
+                padding: 9px 5px;
+            }
+
+            .about-gallery {
+                gap: 8px;
+            }
+
+            .about-gallery img {
+                height: 180px;
+            }
+
+            .about-gallery img:first-child {
+                height: 368px;
+            }
+
+            .about-content h2 {
+                font-size: 31px;
+            }
+
+            .contact-box h2 {
+                font-size: 28px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .floating-whatsapp {
+                width: 55px;
+                height: 55px;
+                left: 15px;
+                bottom: 15px;
+                font-size: 27px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header>
-  <div class="nav">
+    <!-- ================= HEADER ================= -->
 
-    <a href="#" class="logo">
-      <span class="logo-icon">🛒</span>
-      <span>سید بلال</span>
-    </a>
+    <header class="header">
+        <div class="container nav">
 
-    <nav>
-      <a href="#home">کور</a>
-      <a href="#products">توکي</a>
-      <a href="#owner">د دوکان په اړه</a>
-      <a href="#contact">اړیکه</a>
-    </nav>
+            <a href="#home" class="logo">
+                <div class="logo-icon">🛒</div>
+                <span>سید بلال پرچون دوکان</span>
+            </a>
+
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="#home">اصلي پاڼه</a>
+                </li>
+
+                <li>
+                    <a href="#products">توکي</a>
+                </li>
+
+                <li>
+                    <a href="#categories">کټګوري</a>
+                </li>
+
+                <li>
+                    <a href="#about">د دوکان په اړه</a>
+                </li>
+
+                <li>
+                    <a href="#contact">اړیکه</a>
+                </li>
+
+                <li>
+                    <a class="nav-whatsapp"
+                        href="https://wa.me/93702117119?text=سلام%20سید%20بلال%20صاحب،%20زه%20ستاسې%20د%20دوکان%20په%20اړه%20معلومات%20غواړم."
+                        target="_blank">
+                        💬 WhatsApp
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-inner">
+
+            <div class="hero-text">
+
+                <div class="badge">
+                    ⭐ باوري پرچون دوکان
+                </div>
+
+                <h1>
+                    د <span>سید بلال</span><br>
+                    پرچون دوکان
+                </h1>
+
+                <p>
+                    ستاسو د ورځني اړتیاوو لپاره مختلف خوراکي توکي،
+                    څښاک، چپس، صابون، غوړي او نور اړین توکي
+                    په ښه کیفیت او مناسب قیمت ترلاسه کړئ.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a class="btn btn-whatsapp"
+                        href="https://wa.me/93702117119?text=سلام%20سید%20بلال%20صاحب،%20زه%20غواړم%20ستاسې%20د%20دوکان%20په%20اړه%20معلومات%20ترلاسه%20کړم."
+                        target="_blank">
+                        💬 په WhatsApp اړیکه
+                    </a>
+
+                    <a class="btn btn-gold" href="#products">
+                        🛍️ توکي وګورئ
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- OWNER SLIDER -->
+
+            <div class="slider-area">
+
+                <div class="slider-main">
+
+                    <img id="mainSliderImage"
+                        src="https://i.ibb.co/MD2nrn7x/image.png"
+                        alt="د دوکان د مالک عکس">
+
+                    <button class="slider-arrow arrow-next" id="nextBtn">
+                        ❯
+                    </button>
+
+                    <button class="slider-arrow arrow-prev" id="prevBtn">
+                        ❮
+                    </button>
+
+                </div>
+
+                <div class="thumbnails" id="thumbnails"></div>
+
+                <div class="dots" id="dots"></div>
+
+            </div>
+
+        </div>
+
+        <div class="hero-wave"></div>
+
+    </section>
+
+
+    <!-- ================= TRUST ================= -->
+
+    <section class="trust-section">
+
+        <div class="container">
+
+            <div class="trust-grid">
+
+                <div class="trust-card">
+                    <div class="trust-icon">🛡️</div>
+                    <h3>باوري خدمت</h3>
+                    <p>له باور وړ دوکان څخه خدمت</p>
+                </div>
+
+                <div class="trust-card">
+                    <div class="trust-icon">🛍️</div>
+                    <h3>جذابي توکي</h3>
+                    <p>د ورځني استعمال مختلف توکي</p>
+                </div>
+
+                <div class="trust-card">
+                    <div class="trust-icon">💬</div>
+                    <h3>مستقیم WhatsApp</h3>
+                    <p>هر وخت له موږ سره اړیکه</p>
+                </div>
+
+                <div class="trust-card">
+                    <div class="trust-icon">⭐</div>
+                    <h3>ښه کیفیت</h3>
+                    <p>د کیفیت لپاره ځانګړې پاملرنه</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CATEGORIES ================= -->
+
+    <section class="section" id="categories">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <div class="section-label">
+                    زموږ کټګورۍ
+                </div>
+
+                <h2 class="section-title">
+                    هر څه په یوه ځای کې
+                </h2>
+
+                <p class="section-description">
+                    د اړتیا وړ مختلف توکي په اسانه پیدا کړئ.
+                </p>
+
+            </div>
+
+
+            <div class="category-grid">
+
+                <div class="category-card" onclick="setCategory('انرژي ډرنک')">
+                    <div class="category-icon">🥤</div>
+                    <h3>انرژي ډرنک</h3>
+                    <p>مختلف انرژي څښاکونه</p>
+                </div>
+
+                <div class="category-card" onclick="setCategory('چپس او خوږې')">
+                    <div class="category-icon">🍟</div>
+                    <h3>چپس او خوږې</h3>
+                    <p>چپس، کوکي او چاکلیټ</p>
+                </div>
+
+                <div class="category-card" onclick="setCategory('د کور توکي')">
+                    <div class="category-icon">🧼</div>
+                    <h3>د کور توکي</h3>
+                    <p>صابون او نور اړین توکي</p>
+                </div>
+
+                <div class="category-card" onclick="setCategory('نور توکي')">
+                    <div class="category-icon">🛒</div>
+                    <h3>نور توکي</h3>
+                    <p>غوړي، پنبه او نور</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <section class="section products-section" id="products">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <div class="section-label">
+                    زموږ توکي
+                </div>
+
+                <h2 class="section-title">
+                    موجود محصولات
+                </h2>
+
+                <p class="section-description">
+                    خپل د خوښې توکی پیدا کړئ او د WhatsApp له لارې یې په اړه معلومات واخلئ.
+                </p>
+
+            </div>
+
+
+            <div class="product-tools">
+
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="🔎 د توکي نوم ولټوئ..."
+                    >
+
+                </div>
+
+                <select id="categoryFilter" class="filter-select">
+
+                    <option value="ټول">ټول توکي</option>
+
+                    <option value="انرژي ډرنک">
+                        انرژي ډرنک
+                    </option>
+
+                    <option value="چپس او خوږې">
+                        چپس او خوږې
+                    </option>
+
+                    <option value="د کور توکي">
+                        د کور توکي
+                    </option>
+
+                    <option value="نور توکي">
+                        نور توکي
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="product-grid" id="productGrid"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="section" id="about">
+
+        <div class="container">
+
+            <div class="about-grid">
+
+                <div class="about-gallery">
+
+                    <img src="https://i.ibb.co/MD2nrn7x/image.png"
+                        alt="د دوکان عکس">
+
+                    <img src="https://i.ibb.co/x8hq0Mw2/image.png"
+                        alt="د دوکان عکس">
+
+                    <img src="https://i.ibb.co/fVkqq30X/image.png"
+                        alt="د دوکان عکس">
+
+                </div>
+
+
+                <div class="about-content">
+
+                    <div class="section-label">
+                        زموږ په اړه
+                    </div>
+
+                    <h2>
+                        د سید بلال پرچون دوکان
+                    </h2>
+
+                    <p>
+                        موږ هڅه کوو چې خپلو درنو مشتریانو ته د ورځني
+                        ژوند اړین توکي په ښه کیفیت او مناسب ډول وړاندې کړو.
+                    </p>
+
+
+                    <div class="owner-box">
+
+                        <strong>
+                            👤 د دوکان مالک: سید بلال
+                        </strong>
+
+                    </div>
+
+
+                    <ul class="info-list">
+
+                        <li>
+                            <span>📍</span>
+                            <span>
+                                شاجوی بازار، بای پاس سړک،
+                                حاجي سلطان حبیب مارکیټ ته مخامخ
+                            </span>
+                        </li>
+
+                        <li>
+                            <span>📞</span>
+                            <span>
+                                0702117119
+                            </span>
+                        </li>
+
+                        <li>
+                            <span>💬</span>
+                            <span>
+                                د WhatsApp له لارې مستقیمه اړیکه
+                            </span>
+                        </li>
+
+                        <li>
+                            <span>⚡</span>
+                            <span>
+                                Easyload: 0702117119
+                            </span>
+                        </li>
+
+                    </ul>
+
+
+                    <div style="margin-top:25px;">
+
+                        <a class="btn btn-whatsapp"
+                            href="https://wa.me/93702117119?text=سلام%20سید%20بلال%20صاحب"
+                            target="_blank">
+                            💬 اوس اړیکه ونیسئ
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact-section" id="contact">
+
+        <div class="container">
+
+            <div class="contact-box">
+
+                <div>
+
+                    <h2>
+                        له موږ سره اړیکه ونیسئ
+                    </h2>
+
+                    <p>
+                        د هر محصول، قیمت یا موجودیت په اړه د WhatsApp
+                        له لارې له موږ څخه پوښتنه وکړئ.
+                    </p>
+
+
+                    <div class="contact-details">
+
+                        <div>
+                            📞 0702117119
+                        </div>
+
+                        <div>
+                            ⚡ Easyload: 0702117119
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <a class="btn btn-whatsapp"
+                        href="https://wa.me/93702117119?text=سلام%20سید%20بلال%20صاحب،%20زه%20ستاسې%20د%20دوکان%20په%20اړه%20معلومات%20غواړم."
+                        target="_blank">
+
+                        💬 WhatsApp ته لاړ شئ
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div>
+
+                    <h3>
+                        🛒 سید بلال پرچون دوکان
+                    </h3>
+
+                    <p>
+                        ستاسو د ورځني اړتیاوو لپاره
+                        باوري او مناسب پرچون دوکان.
+                    </p>
+
+                    <p>
+                        📍 شاجوی بازار، بای پاس سړک،
+                        حاجي سلطان حبیب مارکیټ ته مخامخ
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        چټک لینکونه
+                    </h3>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="#home">
+                                اصلي پاڼه
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#products">
+                                توکي
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#categories">
+                                کټګوري
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#about">
+                                د دوکان په اړه
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#contact">
+                                اړیکه
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        اړیکې
+                    </h3>
+
+                    <p>
+                        📞 0702117119
+                    </p>
+
+                    <p>
+                        💬 WhatsApp
+                    </p>
+
+                    <p>
+                        ⚡ Easyload: 0702117119
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- WEBSITE CREATOR -->
+
+            <div class="creator-box">
+
+                <div class="creator-label">
+                    💻 ویب‌سایټ جوړونکی
+                </div>
+
+                <div class="creator-name">
+                    عبدالله مختار
+                </div>
+
+                <p>
+                    📞 0702624188
+                </p>
+
+
+                <div class="creator-buttons">
+
+                    <a
+                        class="creator-btn creator-site"
+                        href="https://abdullahmukhtar541-stack.github.io/Mokhtar/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        🌐 د ویب‌سایټ جوړونکی
+                    </a>
+
+
+                    <a
+                        class="creator-btn creator-whatsapp"
+                        href="https://wa.me/93702624188?text=سلام%20عبدالله%20مختار%20صاحب،%20زه%20ستاسې%20د%20ویب‌سایټ%20جوړولو%20خدمتونو%20په%20اړه%20معلومات%20غواړم."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        💬 په WhatsApp اړیکه
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="copyright">
+
+                © 2026 سید بلال پرچون دوکان — ټول حقوق خوندي دي
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= FLOATING WHATSAPP ================= -->
 
     <a
-      class="whatsapp-btn"
-      href="https://wa.me/93702117119?text=سلام%20زه%20ستاسې%20د%20دوکان%20په%20اړه%20معلومات%20غواړم"
-      target="_blank">
-      💬 WhatsApp
-    </a>
-
-  </div>
-</header>
-
-
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-content">
-
-    <span class="badge">🛍️ باوري پرچون دوکان</span>
-
-    <h1>
-      د <span>سید بلال</span><br>
-      پرچون دوکان
-    </h1>
-
-    <p>
-      زموږ په دوکان کې بېلابېل خوراکي توکي،
-      مشروبات او د کور اړتیا وړ شیان موندل کېږي.
-      د هر توکي د معلوماتو او بیې لپاره په WhatsApp
-      اړیکه ونیسئ.
-    </p>
-
-    <div class="hero-buttons">
-
-      <a
-        class="main-btn"
-        href="https://wa.me/93702117119?text=سلام%20زه%20ستاسې%20د%20دوکان%20په%20اړه%20معلومات%20غواړم"
-        target="_blank">
-        💬 په WhatsApp اړیکه
-      </a>
-
-      <a class="second-btn" href="#products">
-        🛍️ توکي وګورئ
-      </a>
-
-    </div>
-
-  </div>
-</section>
-
-
-<!-- CATEGORIES -->
-<section class="container">
-
-  <div class="section-title">
-    <h2>زموږ برخې</h2>
-    <p>د دوکان بېلابېل توکي دلته وګورئ</p>
-  </div>
-
-  <div class="categories">
-
-    <div class="category">
-      <div class="category-icon">🥤</div>
-      <h3>مشروبات</h3>
-    </div>
-
-    <div class="category">
-      <div class="category-icon">🍫</div>
-      <h3>چاکلیټ او خوږه</h3>
-    </div>
-
-    <div class="category">
-      <div class="category-icon">🥔</div>
-      <h3>چیپس او سنیکس</h3>
-    </div>
-
-    <div class="category">
-      <div class="category-icon">🧼</div>
-      <h3>د کور توکي</h3>
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- PRODUCTS -->
-<section class="container" id="products">
-
-  <div class="section-title">
-    <h2>زموږ توکي</h2>
-    <p>د هر توکي د بیې او معلوماتو لپاره WhatsApp ته پیغام واستوئ</p>
-  </div>
-
-  <div class="products" id="productList"></div>
-
-</section>
-
-
-<!-- FEATURES -->
-<section class="features">
-
-  <div class="feature-grid">
-
-    <div class="feature">
-      <div class="feature-icon">⭐</div>
-      <h3>باوري خدمت</h3>
-      <p>زموږ هدف د مشتریانو رضایت دی.</p>
-    </div>
-
-    <div class="feature">
-      <div class="feature-icon">📱</div>
-      <h3>WhatsApp اړیکه</h3>
-      <p>د توکو په اړه ژر معلومات ترلاسه کړئ.</p>
-    </div>
-
-    <div class="feature">
-      <div class="feature-icon">🛒</div>
-      <h3>بېلابېل توکي</h3>
-      <p>د ورځني ژوند اړین توکي په یو ځای کې.</p>
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- OWNER -->
-<section class="container" id="owner">
-
-  <div class="section-title">
-    <h2>د دوکان په اړه</h2>
-    <p>د سید بلال پرچون دوکان معلومات</p>
-  </div>
-
-  <div class="owner">
-
-    <div class="gallery">
-
-      <img src="https://i.ibb.co/MD2nrn7x/image.png" alt="د دوکان عکس">
-      <img src="https://i.ibb.co/x8hq0Mw2/image.png" alt="د دوکان عکس">
-      <img src="https://i.ibb.co/fVkqq30X/image.png" alt="د دوکان عکس">
-      <img src="https://i.ibb.co/Hp4RP2b3/image.png" alt="د دوکان عکس">
-      <img src="https://i.ibb.co/4ndKdMGX/image.png" alt="د دوکان عکس">
-
-    </div>
-
-
-    <div class="owner-info">
-
-      <h2>سید بلال</h2>
-
-      <div class="info">
-        🏪 <strong>دنده:</strong>
-        د پرچون دوکان مالک
-      </div>
-
-      <div class="info">
-        📍 <strong>ادرس:</strong>
-        شاجوی بازار، بای پاس سړک، حاجي سلطان حبیب مارکیټ ته مخامخ
-      </div>
-
-      <div class="info">
-        📞 <strong>موبایل:</strong>
-        0702117119
-      </div>
-
-      <div class="info">
-        💳 <strong>ایزیلوډ:</strong>
-        0702117119
-      </div>
-
-      <br>
-
-      <a
-        class="big-whatsapp"
+        class="floating-whatsapp"
         href="https://wa.me/93702117119?text=سلام%20سید%20بلال%20صاحب"
-        target="_blank">
-        💬 WhatsApp
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- CONTACT -->
-<section class="container" id="contact">
-
-  <div class="contact-box">
-
-    <h2>له موږ سره اړیکه ونیسئ</h2>
-
-    <p>
-      د هر محصول د بیې، موجودیت او نورو معلوماتو لپاره
-      په WhatsApp کې موږ ته پیغام واستوئ.
-    </p>
-
-    <a
-      class="big-whatsapp"
-      href="https://wa.me/93702117119?text=سلام%20سید%20بلال%20صاحب،%20زه%20د%20ستاسې%20د%20دوکان%20په%20اړه%20معلومات%20غواړم"
-      target="_blank">
-      💬 په WhatsApp پیغام واستوئ
+        target="_blank"
+        aria-label="WhatsApp"
+    >
+        💬
     </a>
 
-    <p style="margin-top:20px;">
-      📍 شاجوی بازار، بای پاس سړک، حاجي سلطان حبیب مارکیټ ته مخامخ
-    </p>
 
-  </div>
+    <!-- ================= JAVASCRIPT ================= -->
 
-</section>
+    <script>
 
+        /* ================= MOBILE MENU ================= */
 
-<!-- FOOTER -->
-<footer>
+        const menuBtn = document.getElementById("menuBtn");
+        const navLinks = document.getElementById("navLinks");
 
-  <h3>سید بلال | پرچون دوکان</h3>
+        menuBtn.addEventListener("click", function () {
 
-  <p>
-    📍 شاجوی بازار، بای پاس سړک، حاجي سلطان حبیب مارکیټ ته مخامخ
-  </p>
+            navLinks.classList.toggle("show");
 
-  <p>
-    📞 0702117119
-  </p>
-
-  <p>
-    💳 ایزیلوډ: 0702117119
-  </p>
-
-  <div class="developer">
-    Website Designed & Developed by
-    <strong>عبدالله مختار</strong>
-  </div>
-
-</footer>
+        });
 
 
-<!-- FLOATING WHATSAPP -->
-<a
-  class="floating-whatsapp"
-  href="https://wa.me/93702117119?text=سلام%20سید%20بلال%20صاحب"
-  target="_blank"
-  title="WhatsApp">
-  💬
-</a>
+        document.querySelectorAll(".nav-links a").forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                navLinks.classList.remove("show");
+
+            });
+
+        });
 
 
-<script>
+        /* ================= OWNER SLIDER ================= */
 
-const products = [
+        const sliderImages = [
 
-  {
-    name:"HIT انرژي ډرنک",
-    category:"انرژي مشروبات",
-    image:"https://i.ibb.co/bgP56MqC/image.png"
-  },
+            {
+                src: "https://i.ibb.co/MD2nrn7x/image.png",
+                alt: "د دوکان د مالک عکس"
+            },
 
-  {
-    name:"HELL Apple انرژي ډرنک",
-    category:"انرژي مشروبات",
-    image:"https://i.ibb.co/yF7WrcRM/image.png"
-  },
+            {
+                src: "https://i.ibb.co/x8hq0Mw2/image.png",
+                alt: "د دوکان د مالک عکس"
+            },
 
-  {
-    name:"Papak کوکي د کاکاو کریم سره",
-    category:"خوږه",
-    image:"https://i.ibb.co/0yPzPL0n/image.png"
-  },
+            {
+                src: "https://i.ibb.co/fVkqq30X/image.png",
+                alt: "د دوکان د مالک عکس"
+            },
 
-  {
-    name:"Pop Kek Mini چاکلیټ",
-    category:"چاکلیټ",
-    image:"https://i.ibb.co/cBM75V4/image.png"
-  },
+            {
+                src: "https://i.ibb.co/Hp4RP2b3/image.png",
+                alt: "د دوکان د مالک عکس"
+            },
 
-  {
-    name:"د ګاز سلنډرونه",
-    category:"د کور توکي",
-    image:"https://i.ibb.co/whG0cZYc/image.png"
-  },
+            {
+                src: "https://i.ibb.co/4ndKdMGX/image.png",
+                alt: "د دوکان د مالک عکس"
+            }
 
-  {
-    name:"د ګاز سلنډر",
-    category:"د کور توکي",
-    image:"https://i.ibb.co/Fbfn2k0j/image.png"
-  },
-
-  {
-    name:"Dettol Skincare صابون",
-    category:"د کور توکي",
-    image:"https://i.ibb.co/9mw6rSfG/image.png"
-  },
-
-  {
-    name:"Dettol Skincare صابون — بسته",
-    category:"د کور توکي",
-    image:"https://i.ibb.co/zh5DJy5W/image.png"
-  },
-
-  {
-    name:"مخلوط وچه مېوه او مغزباب",
-    category:"خوراکي توکي",
-    image:"https://i.ibb.co/tM9742L0/image.png"
-  },
-
-  {
-    name:"Cheetos Potato Chips — Chili",
-    category:"چیپس",
-    image:"https://i.ibb.co/9kPXTQM2/image.png"
-  },
-
-  {
-    name:"Lay's Chili Potato Chips",
-    category:"چیپس",
-    image:"https://i.ibb.co/Xx9WSf6v/image.png"
-  },
-
-  {
-    name:"Lay's Flamin' Hot",
-    category:"چیپس",
-    image:"https://i.ibb.co/qLKHvNNX/image.png"
-  },
-
-  {
-    name:"Lay's مختلف خوندونه",
-    category:"چیپس",
-    image:"https://i.ibb.co/jP2SpdtD/image.png"
-  },
-
-  {
-    name:"د پخلي مختلف غوړي",
-    category:"د پخلي توکي",
-    image:"https://i.ibb.co/YBT2k0m1/image.png"
-  },
-
-  {
-    name:"پنبه",
-    category:"د کور توکي",
-    image:"https://i.ibb.co/60N7XkHg/image.png"
-  },
-
-  {
-    name:"Red Bull Extra — 250ml",
-    category:"انرژي مشروبات",
-    image:"https://i.ibb.co/FLHLzcHn/image.png"
-  },
-
-  {
-    name:"Red Bull Energy Drink — 250ml",
-    category:"انرژي مشروبات",
-    image:"https://i.ibb.co/xKyVbrhY/image.png"
-  },
-
-  {
-    name:"Red Bull Editions — مختلف خوندونه",
-    category:"انرژي مشروبات",
-    image:"https://i.ibb.co/bjt7BrcS/image.png"
-  }
-
-];
+        ];
 
 
-const productList = document.getElementById("productList");
+        let currentSlide = 0;
+
+        const mainSliderImage =
+            document.getElementById("mainSliderImage");
+
+        const thumbnails =
+            document.getElementById("thumbnails");
+
+        const dots =
+            document.getElementById("dots");
 
 
-products.forEach((product) => {
+        function createSliderControls() {
 
-  const message =
-    `سلام سید بلال صاحب، زه د "${product.name}" د بیې او موجودیت په اړه معلومات غواړم.`;
+            thumbnails.innerHTML = "";
+            dots.innerHTML = "";
 
-  const card = document.createElement("div");
+            sliderImages.forEach(function (item, index) {
 
-  card.className = "product";
+                const thumb = document.createElement("div");
 
-  card.innerHTML = `
+                thumb.className = "thumb";
 
-    <div class="product-img">
-      <img
-        src="${product.image}"
-        alt="${product.name}"
-        loading="lazy">
-    </div>
+                if (index === 0) {
+                    thumb.classList.add("active");
+                }
 
-    <div class="product-body">
+                thumb.innerHTML = `
+                    <img src="${item.src}" alt="${item.alt}">
+                `;
 
-      <div class="product-cat">
-        ${product.category}
-      </div>
+                thumb.addEventListener("click", function () {
 
-      <h3>
-        ${product.name}
-      </h3>
+                    currentSlide = index;
+                    updateSlider();
 
-      <a
-        class="product-btn"
-        href="https://wa.me/93702117119?text=${encodeURIComponent(message)}"
-        target="_blank">
-        💬 د قیمت لپاره WhatsApp
-      </a>
+                });
 
-    </div>
+                thumbnails.appendChild(thumb);
 
-  `;
 
-  productList.appendChild(card);
+                const dot = document.createElement("div");
 
-});
+                dot.className = "dot";
 
-</script>
+                if (index === 0) {
+                    dot.classList.add("active");
+                }
+
+                dot.addEventListener("click", function () {
+
+                    currentSlide = index;
+                    updateSlider();
+
+                });
+
+                dots.appendChild(dot);
+
+            });
+
+        }
+
+
+        function updateSlider() {
+
+            mainSliderImage.style.opacity = "0";
+
+            setTimeout(function () {
+
+                mainSliderImage.src =
+                    sliderImages[currentSlide].src;
+
+                mainSliderImage.alt =
+                    sliderImages[currentSlide].alt;
+
+                mainSliderImage.style.opacity = "1";
+
+            }, 150);
+
+
+            document
+                .querySelectorAll(".thumb")
+                .forEach(function (item, index) {
+
+                    item.classList.toggle(
+                        "active",
+                        index === currentSlide
+                    );
+
+                });
+
+
+            document
+                .querySelectorAll(".dot")
+                .forEach(function (item, index) {
+
+                    item.classList.toggle(
+                        "active",
+                        index === currentSlide
+                    );
+
+                });
+
+        }
+
+
+        document
+            .getElementById("nextBtn")
+            .addEventListener("click", function () {
+
+                currentSlide++;
+
+                if (currentSlide >= sliderImages.length) {
+                    currentSlide = 0;
+                }
+
+                updateSlider();
+
+            });
+
+
+        document
+            .getElementById("prevBtn")
+            .addEventListener("click", function () {
+
+                currentSlide--;
+
+                if (currentSlide < 0) {
+                    currentSlide = sliderImages.length - 1;
+                }
+
+                updateSlider();
+
+            });
+
+
+        createSliderControls();
+
+
+        /* AUTO SLIDER */
+
+        let sliderTimer = setInterval(function () {
+
+            currentSlide++;
+
+            if (currentSlide >= sliderImages.length) {
+                currentSlide = 0;
+            }
+
+            updateSlider();
+
+        }, 4000);
+
+
+        /* TOUCH SWIPE */
+
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        mainSliderImage.addEventListener("touchstart", function (event) {
+
+            touchStartX = event.changedTouches[0].screenX;
+
+        });
+
+
+        mainSliderImage.addEventListener("touchend", function (event) {
+
+            touchEndX = event.changedTouches[0].screenX;
+
+            const difference =
+                touchStartX - touchEndX;
+
+            if (Math.abs(difference) > 50) {
+
+                if (difference > 0) {
+
+                    currentSlide++;
+
+                    if (currentSlide >= sliderImages.length) {
+                        currentSlide = 0;
+                    }
+
+                } else {
+
+                    currentSlide--;
+
+                    if (currentSlide < 0) {
+                        currentSlide = sliderImages.length - 1;
+                    }
+
+                }
+
+                updateSlider();
+
+            }
+
+        });
+
+
+        /* ================= PRODUCTS ================= */
+
+        const products = [
+
+            {
+                name: "HIT انرژي ډرنک",
+                image: "https://i.ibb.co/bgP56MqC/image.png",
+                category: "انرژي ډرنک"
+            },
+
+            {
+                name: "HELL Apple انرژي ډرنک",
+                image: "https://i.ibb.co/yF7WrcRM/image.png",
+                category: "انرژي ډرنک"
+            },
+
+            {
+                name: "Papak کوکي د کاکاو کریم سره",
+                image: "https://i.ibb.co/0yPzPL0n/image.png",
+                category: "چپس او خوږې"
+            },
+
+            {
+                name: "Pop Kek Mini چاکلیټ",
+                image: "https://i.ibb.co/cBM75V4/image.png",
+                category: "چپس او خوږې"
+            },
+
+            {
+                name: "د ګاز سلنډرونه",
+                image: "https://i.ibb.co/whG0cZYc/image.png",
+                category: "نور توکي"
+            },
+
+            {
+                name: "د ګاز سلنډر",
+                image: "https://i.ibb.co/Fbfn2k0j/image.png",
+                category: "نور توکي"
+            },
+
+            {
+                name: "Dettol Skincare صابون",
+                image: "https://i.ibb.co/9mw6rSfG/image.png",
+                category: "د کور توکي"
+            },
+
+            {
+                name: "Dettol Skincare صابون — بسته",
+                image: "https://i.ibb.co/zh5DJy5W/image.png",
+                category: "د کور توکي"
+            },
+
+            {
+                name: "مخلوط وچه مېوه او مغزباب",
+                image: "https://i.ibb.co/tM9742L0/image.png",
+                category: "نور توکي"
+            },
+
+            {
+                name: "Cheetos Potato Chips — Chili",
+                image: "https://i.ibb.co/9kPXTQM2/image.png",
+                category: "چپس او خوږې"
+            },
+
+            {
+                name: "Lay's Chili Potato Chips",
+                image: "https://i.ibb.co/Xx9WSf6v/image.png",
+                category: "چپس او خوږې"
+            },
+
+            {
+                name: "Lay's Flamin' Hot",
+                image: "https://i.ibb.co/qLKHvNNX/image.png",
+                category: "چپس او خوږې"
+            },
+
+            {
+                name: "Lay's مختلف خوندونه",
+                image: "https://i.ibb.co/jP2SpdtD/image.png",
+                category: "چپس او خوږې"
+            },
+
+            {
+                name: "د پخلي مختلف غوړي",
+                image: "https://i.ibb.co/YBT2k0m1/image.png",
+                category: "نور توکي"
+            },
+
+            {
+                name: "پنبه",
+                image: "https://i.ibb.co/60N7XkHg/image.png",
+                category: "د کور توکي"
+            },
+
+            {
+                name: "Red Bull Extra — 250ml",
+                image: "https://i.ibb.co/FLHLzcHn/image.png",
+                category: "انرژي ډرنک"
+            },
+
+            {
+                name: "Red Bull Energy Drink — 250ml",
+                image: "https://i.ibb.co/xKyVbrhY/image.png",
+                category: "انرژي ډرنک"
+            },
+
+            {
+                name: "Red Bull Editions — مختلف خوندونه",
+                image: "https://i.ibb.co/bjt7BrcS/image.png",
+                category: "انرژي ډرنک"
+            }
+
+        ];
+
+
+        const productGrid =
+            document.getElementById("productGrid");
+
+
+        function displayProducts(list) {
+
+            productGrid.innerHTML = "";
+
+            if (list.length === 0) {
+
+                productGrid.innerHTML = `
+                    <div class="no-products">
+                        😔 کوم توکی پیدا نه شو.
+                    </div>
+                `;
+
+                return;
+            }
+
+
+            list.forEach(function (product) {
+
+                const card =
+                    document.createElement("div");
+
+                card.className = "product-card";
+
+
+                const message =
+                    `سلام سید بلال صاحب، زه د "${product.name}" په اړه معلومات غواړم.`;
+
+
+                const whatsappURL =
+                    "https://wa.me/93702117119?text=" +
+                    encodeURIComponent(message);
+
+
+                card.innerHTML = `
+
+                    <div class="product-image">
+
+                        <img
+                            src="${product.image}"
+                            alt="${product.name}"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            ${product.category}
+                        </div>
+
+                        <h3 class="product-title">
+                            ${product.name}
+                        </h3>
+
+                        <a
+                            class="product-btn"
+                            href="${whatsappURL}"
+                            target="_blank"
+                        >
+                            💬 په WhatsApp پوښتنه
+                        </a>
+
+                    </div>
+
+                `;
+
+
+                productGrid.appendChild(card);
+
+            });
+
+        }
+
+
+        displayProducts(products);
+
+
+        /* SEARCH */
+
+        const searchInput =
+            document.getElementById("searchInput");
+
+
+        const categoryFilter =
+            document.getElementById("categoryFilter");
+
+
+        function filterProducts() {
+
+            const search =
+                searchInput.value
+                    .trim()
+                    .toLowerCase();
+
+
+            const category =
+                categoryFilter.value;
+
+
+            const filtered =
+                products.filter(function (product) {
+
+                    const matchesSearch =
+                        product.name
+                            .toLowerCase()
+                            .includes(search);
+
+
+                    const matchesCategory =
+                        category === "ټول" ||
+                        product.category === category;
+
+
+                    return matchesSearch &&
+                        matchesCategory;
+
+                });
+
+
+            displayProducts(filtered);
+
+        }
+
+
+        searchInput.addEventListener(
+            "input",
+            filterProducts
+        );
+
+
+        categoryFilter.addEventListener(
+            "change",
+            filterProducts
+        );
+
+
+        /* CATEGORY CLICK */
+
+        function setCategory(category) {
+
+            categoryFilter.value = category;
+
+            document
+                .getElementById("products")
+                .scrollIntoView({
+                    behavior: "smooth"
+                });
+
+            filterProducts();
+
+        }
+
+    </script>
 
 </body>
+
 </html>
