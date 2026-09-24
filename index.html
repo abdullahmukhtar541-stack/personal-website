@@ -1123,6 +1123,26 @@
                 font-size: 27px;
             }
         }
+        .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 800;
+    color: var(--green);
+    font-size: 22px;
+    white-space: nowrap;
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}@media (max-width: 600px) {
+    .logo img {
+        width: 55px;
+        height: 55px;
+    }
+}
         /* ================= PRODUCT IMAGE LIGHTBOX ================= */
 
 .product-image {
@@ -1229,9 +1249,9 @@
         <div class="container nav">
 
             <a href="#home" class="logo">
-                <div class="logo-icon">🛒</div>
-                <span>سید بلال پرچون دوکان</span>
-            </a>
+    <img src="https://i.ibb.co/nsCTZygm/image.png" alt="سید بلال لوګو">
+    <span>سید بلال پرچون دوکان</span>
+</a>
 
             <button class="menu-btn" id="menuBtn">
                 ☰
