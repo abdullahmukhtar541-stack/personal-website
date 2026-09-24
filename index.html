@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="ps" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>عبدالله مختار | پرچون مارکېټ</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+font-family:Tahoma,Arial,sans-serif;
+background:#f4f8f6;
+color:#17352b;
+line-height:1.8
+}
+a{text-decoration:none}
+.container{width:92%;max-width:1250px;margin:auto}
+
+/* HEADER */
+header{
+background:#fff;
+position:sticky;
+top:0;
+z-index:999;
+box-shadow:0 3px 20px #00000012
+}
+.header{
+min-height:78px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px
+}
+.logo{
+font-size:25px;
+font-weight:900;
+color:#087c4b;
+white-space:nowrap
+}
+.logo span{color:#e0ad00}
+nav{display:flex;gap:25px}
+nav a{font-weight:bold;color:#17352b}
+nav a:hover{color:#087c4b}
+.whatsapp{
+background:#20b958;
+color:white;
+padding:11px 18px;
+border-radius:12px;
+font-weight:bold
+}
+
+/* HERO */
+.hero{
+margin-top:25px;
+min-height:440px;
+border-radius:28px;
+overflow:hidden;
+background:
+linear-gradient(90deg,#00583fe8,#087c4b9e),
+url("https://i.ibb.co/YBT2k0m1/image.png") center/cover;
+display:flex;
+align-items:center
+}
+.hero-content{
+width:60%;
+padding:55px;
+color:white
+}
+.hero h1{
+font-size:44px;
+line-height:1.45;
+margin-bottom:12px
+}
+.hero h1 span{color:#ffd51c}
+.hero p{
+font-size:18px;
+line-height:2;
+margin-bottom:25px
+}
+.hero-btn{
+display:inline-block;
+background:#ffd21c;
+color:#17352b;
+padding:14px 25px;
+border-radius:12px;
+font-weight:bold
+}
+
+/* TITLE */
+.section{padding:50px 0}
+.title{
+text-align:center;
+margin-bottom:30px
+}
+.title h2{
+font-size:30px;
+margin-bottom:7px
+}
+.title p{color:#718079}
+
+/* CATEGORIES */
+.categories{
+display:grid;
+grid-template-columns:repeat(6,1fr);
+gap:15px
+}
+.category{
+background:white;
+padding:22px 10px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 5px 20px #00000008;
+transition:.2s
+}
+.category:hover{transform:translateY(-5px)}
+.category b{display:block}
+.icon{font-size:40px;display:block}
+
+/* PRODUCTS */
+.products{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px
+}
+.product{
+background:#fff;
+border-radius:19px;
+padding:12px;
+box-shadow:0 5px 22px #0000000b;
+transition:.25s;
+border:1px solid #e6eee9
+}
+.product:hover{
+transform:translateY(-6px);
+box-shadow:0 12px 30px #087c4b20
+}
+.product img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:14px;
+background:#f2f5f3
+}
+.product h3{
+font-size:17px;
+margin:13px 5px 4px
+}
+.product small{
+color:#7b8983;
+margin:0 5px
+}
+.product-btn{
+display:block;
+background:#20b958;
+color:#fff;
+text-align:center;
+padding:10px;
+border-radius:11px;
+font-weight:bold;
+margin-top:12px
+}
+.product-btn:hover{background:#119c47}
+
+/* FEATURES */
+.features{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:16px
+}
+.feature{
+background:white;
+border-radius:18px;
+padding:25px;
+text-align:center;
+box-shadow:0 4px 18px #00000008
+}
+.feature .ico{font-size:38px}
+.feature h3{margin:8px 0}
+
+/* OWNER */
+.owner-box{
+background:#fff;
+border-radius:25px;
+padding:25px;
+box-shadow:0 5px 25px #0000000b
+}
+.owner-gallery{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:14px
+}
+.owner-gallery img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:17px
+}
+.owner-info{
+margin-top:25px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px
+}
+.info{
+background:#f2f8f5;
+padding:18px;
+border-radius:14px
+}
+.info strong{color:#087c4b}
+
+/* CONTACT */
+.contact{
+background:#10372b;
+color:white;
+border-radius:25px;
+padding:45px;
+display:grid;
+grid-template-columns:1fr 320px;
+gap:40px;
+align-items:center
+}
+.contact h2{
+font-size:31px;
+margin-bottom:12px
+}
+.contact p{
+color:#d8ebe3;
+line-height:2
+}
+.contact-btn{
+display:block;
+background:#20b958;
+color:white;
+padding:15px;
+text-align:center;
+border-radius:12px;
+font-weight:bold;
+margin-top:20px
+}
+.qr{
+background:#fff;
+padding:18px;
+border-radius:20px;
+text-align:center;
+color:#222
+}
+.qr .fakeqr{
+font-size:120px;
+line-height:1;
+padding:15px;
+background:#f2f2f2;
+border-radius:12px
+}
+
+/* FOOTER */
+footer{
+background:#08261d;
+color:#cce1d8;
+padding:40px 0;
+margin-top:50px;
+text-align:center
+}
+footer h2{color:#fff}
+footer p{margin:5px}
+
+/* FLOATING */
+.float{
+position:fixed;
+bottom:22px;
+left:22px;
+width:62px;
+height:62px;
+border-radius:50%;
+background:#20b958;
+color:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:29px;
+box-shadow:0 7px 25px #0004;
+z-index:999
+}
+
+/* MOBILE */
+@media(max-width:950px){
+.header{flex-wrap:wrap;padding:12px 0}
+nav{
+order:3;
+width:100%;
+justify-content:center;
+gap:15px;
+font-size:13px
+}
+.hero-content{width:100%;padding:45px 30px}
+.hero h1{font-size:35px}
+.categories{grid-template-columns:repeat(3,1fr)}
+.products{grid-template-columns:repeat(2,1fr)}
+.features{grid-template-columns:repeat(2,1fr)}
+.owner-gallery{grid-template-columns:repeat(3,1fr)}
+.contact{grid-template-columns:1fr}
+.owner-info{grid-template-columns:1fr}
+}
+
+@media(max-width:550px){
+.container{width:94%}
+.logo{font-size:20px}
+.whatsapp{font-size:12px;padding:9px 12px}
+.hero{min-height:430px}
+.hero h1{font-size:28px}
+.hero p{font-size:15px}
+.categories{grid-template-columns:repeat(2,1fr)}
+.products{grid-template-columns:repeat(2,1fr);gap:9px}
+.product{padding:8px}
+.product img{height:150px}
+.product h3{font-size:14px}
+.features{grid-template-columns:1fr}
+.owner-gallery{grid-template-columns:repeat(2,1fr)}
+.owner-gallery img{height:170px}
+.contact{padding:25px 18px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container header">
+
+<div class="logo">
+🛒 عبدالله <span>مختار</span>
+</div>
+
+<nav>
+<a href="#home">اصلي پاڼه</a>
+<a href="#products">توکي</a>
+<a href="#owner">مالک</a>
+<a href="#contact">اړیکه</a>
+</nav>
+
+<a class="whatsapp"
+href="https://wa.me/93702117119"
+target="_blank">
+💬 WhatsApp
+</a>
+
+</div>
+</header>
+
+
+<main id="home">
+
+<!-- HERO -->
+<section class="hero container">
+
+<div class="hero-content">
+
+<h1>
+<span>عبدالله مختار</span><br>
+ستاسې د باور وړ پرچون دوکان
+</h1>
+
+<p>
+خوراکي توکي، مشروبات، چپس، بسکټ،
+غوړي، د کور اړین توکي او نور محصولات.
+</p>
+
+<p>
+هر محصول وګورئ او د اخیستلو لپاره
+مستقیم په WhatsApp کې اړیکه ونیسئ.
+</p>
+
+<a class="hero-btn" href="#products">
+🛍️ ټول توکي وګورئ
+</a>
+
+</div>
+
+</section>
+
+
+<!-- CATEGORIES -->
+<section class="section container">
+
+<div class="title">
+<h2>د توکو کټګورۍ</h2>
+<p>زموږ د دوکان مهم محصولات</p>
+</div>
+
+<div class="categories">
+
+<div class="category">
+<span class="icon">🥤</span>
+<b>انرژي مشروبات</b>
+</div>
+
+<div class="category">
+<span class="icon">🍪</span>
+<b>بسکټ او شیریني</b>
+</div>
+
+<div class="category">
+<span class="icon">🥔</span>
+<b>چپس</b>
+</div>
+
+<div class="category">
+<span class="icon">🛢️</span>
+<b>غوړي</b>
+</div>
+
+<div class="category">
+<span class="icon">🥜</span>
+<b>وچه مېوه</b>
+</div>
+
+<div class="category">
+<span class="icon">🧼</span>
+<b>د کور توکي</b>
+</div>
+
+</div>
+</section>
+
+
+<!-- PRODUCTS -->
+<section class="section container" id="products">
+
+<div class="title">
+<h2>زموږ محصولات</h2>
+<p>د هر محصول د اخیستلو لپاره په WhatsApp اړیکه ونیسئ</p>
+</div>
+
+<div class="products" id="productList"></div>
+
+</section>
+
+
+<!-- FEATURES -->
+<section class="section container">
+
+<div class="title">
+<h2>ولې له موږه خرید وکړئ؟</h2>
+</div>
+
+<div class="features">
+
+<div class="feature">
+<div class="ico">⭐</div>
+<h3>باکیفیته توکي</h3>
+<p>د باور وړ محصولات</p>
+</div>
+
+<div class="feature">
+<div class="ico">💰</div>
+<h3>مناسب قیمت</h3>
+<p>د قیمت لپاره WhatsApp ته پیغام</p>
+</div>
+
+<div class="feature">
+<div class="ico">📱</div>
+<h3>اسانه اړیکه</h3>
+<p>مستقیم WhatsApp اړیکه</p>
+</div>
+
+<div class="feature">
+<div class="ico">🤝</div>
+<h3>باوري خدمت</h3>
+<p>له مشتریانو سره ښه چلند</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- OWNER -->
+<section class="section container" id="owner">
+
+<div class="title">
+<h2>د دوکان مالک</h2>
+<p>عبدالله مختار</p>
+</div>
+
+<div class="owner-box">
+
+<div class="owner-gallery">
+
+<img src="https://i.ibb.co/MD2nrn7x/image.png">
+<img src="https://i.ibb.co/x8hq0Mw2/image.png">
+<img src="https://i.ibb.co/fVkqq30X/image.png">
+<img src="https://i.ibb.co/Hp4RP2b3/image.png">
+<img src="https://i.ibb.co/4ndKdMGX/image.png">
+
+</div>
+
+<div class="owner-info">
+
+<div class="info">
+<strong>📍 ادرس</strong>
+<br>
+شاجوی بازار، بای پاس سړک،
+حاجي سلطان حبیب مارکیټ ته مخامخ
+</div>
+
+<div class="info">
+<strong>📞 د اړیکې شمېره</strong>
+<br>
+0702117119
+</div>
+
+<div class="info">
+<strong>💬 WhatsApp</strong>
+<br>
+د محصول او قیمت لپاره مستقیم اړیکه
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- CONTACT -->
+<section class="section container" id="contact">
+
+<div class="contact">
+
+<div>
+
+<h2>
+په WhatsApp کې اړیکه ونیسئ
+</h2>
+
+<p>
+که د کوم محصول قیمت، موجودیت یا نور معلومات غواړئ،
+لاندې تڼۍ کېکاږئ او مستقیم WhatsApp ته پیغام واستوئ.
+</p>
+
+<p>
+📞 0702117119
+</p>
+
+<p>
+📍 شاجوی بازار، بای پاس سړک،
+حاجي سلطان حبیب مارکیټ ته مخامخ
+</p>
+
+<a class="contact-btn"
+href="https://wa.me/93702117119?text=سلام عبدالله مختار صاحب، زه د دوکان د توکو په اړه معلومات غواړم."
+target="_blank">
+💬 WhatsApp ته پیغام واستوئ
+</a>
+
+</div>
+
+<div class="qr">
+
+<div class="fakeqr">
+▦
+</div>
+
+<h3>WhatsApp</h3>
+
+<p>
+د اړیکې لپاره پورته تڼۍ وکاروئ
+</p>
+
+</div>
+
+</div>
+</section>
+
+</main>
+
+
+<footer>
+
+<h2>🛒 عبدالله مختار</h2>
+
+<p>پرچون مارکېټ</p>
+
+<p>
+📍 شاجوی بازار، بای پاس سړک،
+حاجي سلطان حبیب مارکیټ ته مخامخ
+</p>
+
+<p>📞 0702117119</p>
+
+<p>© 2026 عبدالله مختار — ټول حقوق خوندي دي</p>
+
+</footer>
+
+
+<a class="float"
+href="https://wa.me/93702117119?text=سلام، زه د دوکان د توکو په اړه معلومات غواړم."
+target="_blank">
+💬
+</a>
+
+
+<script>
+
+const products = [
+
+{
+name:"HIT انرژي ډرنک",
+image:"https://i.ibb.co/bgP56MqC/image.png",
+cat:"انرژي مشروبات"
+},
+
+{
+name:"HELL Apple انرژي ډرنک",
+image:"https://i.ibb.co/yF7WrcRM/image.png",
+cat:"انرژي مشروبات"
+},
+
+{
+name:"Papak کوکي د کاکاو کریم سره",
+image:"https://i.ibb.co/0yPzPL0n/image.png",
+cat:"بسکټ او شیریني"
+},
+
+{
+name:"Pop Kek Mini چاکلیټ",
+image:"https://i.ibb.co/cBM75V4/image.png",
+cat:"بسکټ او شیریني"
+},
+
+{
+name:"د ګاز سلنډرونه",
+image:"https://i.ibb.co/whG0cZYc/image.png",
+cat:"د کور توکي"
+},
+
+{
+name:"د ګاز سلنډر",
+image:"https://i.ibb.co/Fbfn2k0j/image.png",
+cat:"د کور توکي"
+},
+
+{
+name:"Dettol Skincare صابون",
+image:"https://i.ibb.co/9mw6rSfG/image.png",
+cat:"د کور توکي"
+},
+
+{
+name:"Dettol Skincare صابون — بسته",
+image:"https://i.ibb.co/zh5DJy5W/image.png",
+cat:"د کور توکي"
+},
+
+{
+name:"مخلوط وچه مېوه او مغزباب",
+image:"https://i.ibb.co/tM9742L0/image.png",
+cat:"وچه مېوه"
+},
+
+{
+name:"Cheetos Potato Chips — Chili",
+image:"https://i.ibb.co/9kPXTQM2/image.png",
+cat:"چپس"
+},
+
+{
+name:"Lay's Chili Potato Chips",
+image:"https://i.ibb.co/Xx9WSf6v/image.png",
+cat:"چپس"
+},
+
+{
+name:"Lay's Flamin' Hot",
+image:"https://i.ibb.co/qLKHvNNX/image.png",
+cat:"چپس"
+},
+
+{
+name:"Lay's مختلف خوندونه",
+image:"https://i.ibb.co/jP2SpdtD/image.png",
+cat:"چپس"
+},
+
+{
+name:"د پخلي مختلف غوړي",
+image:"https://i.ibb.co/YBT2k0m1/image.png",
+cat:"غوړي"
+},
+
+{
+name:"پنبه",
+image:"https://i.ibb.co/60N7XkHg/image.png",
+cat:"نور توکي"
+},
+
+{
+name:"Red Bull Extra — 250ml",
+image:"https://i.ibb.co/FLHLzcHn/image.png",
+cat:"انرژي مشروبات"
+},
+
+{
+name:"Red Bull Energy Drink — 250ml",
+image:"https://i.ibb.co/xKyVbrhY/image.png",
+cat:"انرژي مشروبات"
+},
+
+{
+name:"Red Bull Editions — مختلف خوندونه",
+image:"https://i.ibb.co/bjt7BrcS/image.png",
+cat:"انرژي مشروبات"
+}
+
+];
+
+
+const list=document.getElementById("productList");
+
+products.forEach((p,index)=>{
+
+const message=
+"سلام عبدالله مختار صاحب، زه د «"+
+p.name+
+"» په اړه معلومات او قیمت غواړم.";
+
+list.innerHTML += `
+
+<div class="product">
+
+<img src="${p.image}" alt="${p.name}">
+
+<h3>${p.name}</h3>
+
+<small>${p.cat}</small>
+
+<a class="product-btn"
+href="https://wa.me/93702117119?text=${encodeURIComponent(message)}"
+target="_blank">
+
+💬 د قیمت لپاره WhatsApp
+
+</a>
+
+</div>
+
+`;
+
+});
+
+</script>
+
+</body>
+</html>
