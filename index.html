@@ -1123,9 +1123,104 @@
                 font-size: 27px;
             }
         }
+        /* ================= PRODUCT IMAGE LIGHTBOX ================= */
+
+.product-image {
+    cursor: zoom-in;
+}
+
+.image-lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .88);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 25px;
+}
+
+.image-lightbox.show {
+    display: flex;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    max-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 18px;
+    box-shadow: 0 20px 70px rgba(0, 0, 0, .5);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    color: #064b3f;
+    font-size: 27px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.lightbox-close:hover {
+    background: #ffc400;
+}
+
+@media (max-width: 600px) {
+
+    .image-lightbox {
+        padding: 15px;
+    }
+
+    .lightbox-content img {
+        max-height: 80vh;
+        border-radius: 12px;
+    }
+
+    .lightbox-close {
+        top: -10px;
+        left: 0;
+        width: 43px;
+        height: 43px;
+    }
+}
     </style>
 </head>
+<!-- ================= IMAGE LIGHTBOX ================= -->
 
+<div class="image-lightbox" id="imageLightbox">
+
+    <div class="lightbox-content">
+
+        <button class="lightbox-close" id="lightboxClose">
+            ×
+        </button>
+
+        <img
+            id="lightboxImage"
+            src=""
+            alt="غټ محصول"
+        >
+
+    </div>
+
+</div>
 <body>
 
     <!-- ================= HEADER ================= -->
@@ -2245,7 +2340,77 @@ const sliderImages = [
             filterProducts();
 
         }
+/* ================= PRODUCT IMAGE ZOOM ================= */
 
+const imageLightbox =
+    document.getElementById("imageLightbox");
+
+const lightboxImage =
+    document.getElementById("lightboxImage");
+
+const lightboxClose =
+    document.getElementById("lightboxClose");
+
+
+document.addEventListener("click", function (event) {
+
+    const productImage =
+        event.target.closest(".product-image img");
+
+    if (!productImage) {
+        return;
+    }
+
+    lightboxImage.src =
+        productImage.src;
+
+    lightboxImage.alt =
+        productImage.alt;
+
+    imageLightbox.classList.add("show");
+
+    document.body.style.overflow = "hidden";
+
+});
+
+
+function closeLightbox() {
+
+    imageLightbox.classList.remove("show");
+
+    document.body.style.overflow = "";
+
+}
+
+
+lightboxClose.addEventListener(
+    "click",
+    closeLightbox
+);
+
+
+imageLightbox.addEventListener(
+    "click",
+    function (event) {
+
+        if (event.target === imageLightbox) {
+            closeLightbox();
+        }
+
+    }
+);
+
+
+document.addEventListener(
+    "keydown",
+    function (event) {
+
+        if (event.key === "Escape") {
+            closeLightbox();
+        }
+
+    }
+);
     </script>
 
 </body>
