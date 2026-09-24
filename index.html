@@ -1246,7 +1246,10 @@
   --glass:rgba(255,255,255,.78);
 }
 html{scroll-padding-top:90px}
-body{background:var(--bg);color:var(--ink);transition:background .35s,color .35s}
+body{background:var(--bg);color:var(--ink);transition:background .35s,color .35s;position:relative;isolation:isolate}
+body::before{content:"";position:fixed;inset:0;background:url("https://i.ibb.co/xqmmh4Pd/image.png") center center/cover no-repeat;opacity:.20;z-index:-2;pointer-events:none}
+body::after{content:"";position:fixed;inset:0;background:rgba(247,250,248,.72);z-index:-1;pointer-events:none}
+body.dark::after{background:rgba(8,15,13,.80)}
 body::selection{background:var(--gold);color:var(--green)}
 
 /* Elegant Pashto typography */
@@ -1291,7 +1294,7 @@ body,.btn,.nav-links a,input,select,button{font-family:"Noto Naskh Arabic",Tahom
 .product-card:hover .product-image img{transform:scale(1.06)}
 .product-info{background:var(--surface)}
 .search-box input,.filter-select{background:var(--surface);color:var(--ink);border-color:var(--line);box-shadow:0 7px 22px rgba(0,0,0,.035)}
-.products-section{background:var(--surface2)}
+.products-section{background:color-mix(in srgb,var(--surface2) 88%, transparent)}
 
 /* All images are zoomable */
 .about-gallery img,.thumb img{cursor:zoom-in}
@@ -1329,6 +1332,8 @@ body,.btn,.nav-links a,input,select,button{font-family:"Noto Naskh Arabic",Tahom
 .scroll-top{position:fixed;right:22px;bottom:22px;width:52px;height:52px;border:0;border-radius:50%;background:var(--gold);color:var(--green);font-size:22px;font-weight:900;cursor:pointer;z-index:1000;opacity:0;visibility:hidden;transform:translateY(15px);transition:.3s;box-shadow:0 12px 30px rgba(255,196,0,.3)}
 .scroll-top.show{opacity:1;visibility:visible;transform:none}
 
+.mobile-hero-image{display:none}
+
 /* Dark mode */
 body.dark{
   --bg:#0b1110;--surface:#111b19;--surface2:#0e1715;--ink:#eef7f3;--muted:#a9bbb5;--line:#263a34;--green:#45b69b;--green2:#63d2b5;--glass:rgba(11,17,16,.86);--shadow:0 18px 55px rgba(0,0,0,.35)
@@ -1344,10 +1349,15 @@ body.dark .more-toggle{color:var(--ink)}
 body.dark .theme-toggle{background:#15211e}
 
 @media(max-width:800px){
+ body::before{opacity:.26;background-position:center center;background-attachment:fixed}
  .theme-toggle{position:absolute;left:72px;top:20px}
  .slider-main{height:470px}
  .about-content{padding:25px}
  .lightbox-nav{width:44px;height:44px;font-size:20px}
+ .mobile-hero-image{display:block;width:min(88vw,360px);height:220px;object-fit:contain;margin:0 auto 20px;border-radius:24px;padding:5px;background:rgba(255,255,255,.96);box-shadow:0 18px 45px rgba(0,0,0,.28)}
+}
+@media(max-width:550px){
+ .mobile-hero-image{width:86vw;height:205px;margin-bottom:18px}
 }
 @media(max-width:550px){
  .logo span{font-size:17px}.logo img{width:55px;height:55px}
@@ -1449,6 +1459,8 @@ body.dark .theme-toggle{background:#15211e}
                 <div class="badge">
                     ⭐ باوري پرچون دوکان
                 </div>
+
+                <img class="mobile-hero-image" src="https://i.ibb.co/Lj3mcWR/image.png" alt="سید بلال پرچون دوکان">
 
                 <h1>
                     د <span>سید بلال</span><br>
