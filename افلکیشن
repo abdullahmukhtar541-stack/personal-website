@@ -1,0 +1,20 @@
+{
+  "name": "د شرکت مدیریت سیستم",
+  "short_name": "شرکت مدیریت",
+  "description": "د کارکوونکو، مشتریانو او شکایتونو مدیریت",
+  "lang": "ps",
+  "dir": "rtl",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f1f5f9",
+  "theme_color": "#102a43",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
